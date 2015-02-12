@@ -1,7 +1,11 @@
 class ConceptsController < ApplicationController
 
+  def index
+    @concepts = Concept.all
+  end
+
   def show
-    @concept = Concept.find(params[:id])
+    @concept = Concept.find params[:id]
   end
 
   def new
@@ -11,6 +15,12 @@ class ConceptsController < ApplicationController
     @concept = Concept.new scrub_parameters
     @concept.save
     redirect_to @concept
+  end
+
+  def destroy
+    @concept = Concept.find params[:id]
+    @concept.destroy
+    redirect_to concepts_path
   end
 
 private

@@ -1,0 +1,19 @@
+<h1>All Concepts for Review</h1>
+
+<table>
+  <tr>
+    <th>title</th>
+    <th>description</th>
+  </tr>
+ 
+  <% @concepts.each do |concept| %>
+    <tr>
+      <td><%= concept.title %></td>
+      <td><%= concept.description %></td>
+      <td><%= link_to 'view', concept %></td>
+      <td><%= link_to 'delete', concept,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
