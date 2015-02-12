@@ -18,3 +18,12 @@
 $(document).on("click",".concept", function(e) {
    window.location.replace("/concepts/" + this.id);
 });
+
+$(document).on("click",".header-burger", function(e) {
+   $(this).hide();
+   $(".side-nav").show();
+});
+
+$(document).on("click", ".close", function(e) {
+    $(".side-nav").hide();
+});
