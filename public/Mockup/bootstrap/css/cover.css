@@ -9,6 +9,10 @@ a:hover {
   color: #fff;
 }
 
+.copyright{
+  color:#0056A2 ;
+}
+
 /*Ziras title*/ 
 .logotitle{
   font-size: 80px;
@@ -72,6 +76,11 @@ body {
   margin-bottom: 10px;
 }
 
+.loginbutton{
+  background-color: #0056A2;
+  color: white;
+}
+
 .masthead-nav > li {
   display: inline-block;
 
@@ -98,8 +107,9 @@ body {
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
   color: #0056A2;
-  border-bottom-color: #fff;
+  border-bottom-color: #0056A2;
 }
+
 
 @media (min-width: 768px) {
   .masthead-brand {
