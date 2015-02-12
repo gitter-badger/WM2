@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on("click",".concept", function(e) {
+   window.location.replace("/concepts/" + this.id);
+});

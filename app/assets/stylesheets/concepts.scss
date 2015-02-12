@@ -1,3 +1,45 @@
 // Place all the styles related to the Concepts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.concepts-list-header {
+    font-size: 2em;
+    font-weight: 300;
+    display: block;
+    position: relative;
+    left: 10px;
+    padding: 10px;
+}
+
+
+.concepts {
+    position: relative;
+    width: 90%;
+    padding: 10px;
+}
+
+    .concepts > .concept {
+        position: relative;
+        width: calc(100% - 40px);
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+    
+        .concept > .title {
+            display: block;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        
+        .concept > .description {
+            color: rgba(0, 0, 0, .7);
+            display: block;
+        }
+        
+        .concept:hover {
+            background: rgba(0, 0, 0, .06);
+            border-left: 3px solid black;
+            cursor: pointer;
+            padding-left: 17px;
+        }

@@ -1,19 +1,19 @@
-<h1>All Concepts for Review</h1>
 
-<table>
-  <tr>
-    <th>title</th>
-    <th>description</th>
-  </tr>
- 
+<div class="concepts-list-header">Concepts</div>
+ <center>
+ <div class="concepts">
   <% @concepts.each do |concept| %>
-    <tr>
-      <td><%= concept.title %></td>
-      <td><%= concept.description %></td>
-      <td><%= link_to 'view', concept %></td>
-      <td><%= link_to 'delete', concept,
+    <div class="concept" id="<%= concept.id %>">
+      <div class="title">
+        <%= concept.title %>
+      </div>
+      <div class="description">
+        <%= concept.description.length > 160 ? concept.description[0...160] + "..." : concept.description %>
+      </div>
+     <!-- <%= link_to 'delete', concept,
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+              data: { confirm: 'Are you sure?' } %>-->
+   </div>
   <% end %>
-</table>
+  </div>
+  </center>
