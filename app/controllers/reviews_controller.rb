@@ -9,11 +9,15 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new
-    @concept = params[:concept_id]
+    @review.concept = params.require(:concept)
+    @review.user = current_user.id
   end
 
   # GET /reviews/1/edit
   def edit
+    unless user_signed_in? and current_user.id == @review.user
+      render
+    end
   end
 
   # POST /reviews
