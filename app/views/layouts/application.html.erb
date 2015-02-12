@@ -10,7 +10,14 @@
 <body>
   <div class="header-nav">
     <div class="logo"></div>
-    <div class="username"><%= current_user.email %></div>
+    <% if user_signed_in? %>
+      <div class="username">
+        <%= current_user.email %>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
+      </div>
+    <% else %>
+      <div class="username"><%= link_to('Login', new_user_session_path)  %> </div>
+    <% end %>
     
   </div>
   <p class="notice"><%= notice %></p>
