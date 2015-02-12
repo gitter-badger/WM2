@@ -43,3 +43,38 @@
             cursor: pointer;
             padding-left: 17px;
         }
+        
+
+
+.show-concept {
+    position: relative;
+    height: 60%;
+    width: 90%;
+    padding: 20px;
+    text-align: left;
+    
+}
+
+    .show-concept > .concept-title {
+        font-size: 1.8em;
+        line-height: 1.1em;
+    }
+    
+    .show-concept > .concept-description {
+        padding: 10px;
+        padding-top: 20px;
+    }
+    
+    .show-concept > .concept-content {
+        padding: 10px;
+        background: rgba(0,0, 0, .06);
+    }
+    
+.reply-to-concept {
+    float: left;
+    padding: 20px;
+    border: 0px;
+    background: #27ae60;
+    color: white;
+    text-transform: uppercase;
+}

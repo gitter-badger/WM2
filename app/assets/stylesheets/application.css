@@ -13,10 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ 
+.notice, .alert {
+    padding: 0px;
+    margin: 0px;
+}
 
 html, body {
     margin: 0px;
     padding: 0px;
+    
 }
 
 .header-nav {
@@ -34,5 +40,5 @@ html, body {
         font-size: 1.2em;
         position: relative;
         right: 20px;
-        top: 11px;
+        top: 13px;
     }
