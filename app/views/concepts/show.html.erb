@@ -36,8 +36,12 @@
                             </div>
                         <% end %>
                         <div class="review-user">
-                            <%= is_yours ? 'you' : reviewer.email %>
-                        </div><br>
+                            <%= is_yours ? 'You' : reviewer.email %>
+                            <text style="font-size: .8em; color: rgba(0, 0, 0, .5);">
+                                on 
+                                <%= review.created_at %>
+                            </text>
+                        </div>
                         <div class="review-content">
                             <%= simple_format review.content %>
                             <div class="triangle"></div>

@@ -121,9 +121,17 @@
         background: #e67e22;
     }
     
+        .owner-controls .edit:hover {
+            background: #f39c12 !important;
+        }
+    
     .owner-controls .delete {
         background: #c0392b;
     }
+    
+        .owner-controls .delete:hover {
+            background: #e74c3c !important;
+        }
 
 
 
@@ -171,35 +179,23 @@
 .review-pane {
     position: relative;
     display: block;
-    width: 100%;
+    width: calc(100% - 20px);
+    padding: 10px;
+    background: rgba(0, 0, 0, .08);
 }
     
     .review-user {
-        display: inline-block;
+        display: block;
     }
     
     .review-content {
-        display: inline-block;
+        display: block;
         padding: 14px;
         padding-top: 0px;
         padding-bottom: 0px;
-        background: #3498db;
         position: relative;
         margin-left: 10px;
         top: 6px;
-        color: white;
         font-family: 'Rokkitt', serif;
         line-height: 1.2em;
-    }
-    
-    .review-content > .triangle {
-        position: absolute;
-        left: -14px;
-        top: 0px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 14px 14px 0;
-        border-color: transparent #3498db transparent transparent;
-        z-index: 9;
     }
