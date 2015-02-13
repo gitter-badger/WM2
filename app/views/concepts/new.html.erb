@@ -1,20 +1,30 @@
-<%= form_for :concept, url: concepts_path do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+<center>
+  
+  <div class="concepts"><br>
+    <div class="concepts-list-header">NEW CONCEPT</div>
+  </div>
+  
+  <div class="show-concept new-form">
+     
+    <%= form_for :concept, url: concepts_path do |f| %>
+      <p>
+        <%= f.text_field :title, :placeholder => "Title", :class => "new-title" %>
+      </p>
+     
+      <p>
+        <%= f.text_area :description, :placeholder => "Description" %>
+      </p>
+    
+      <p>
+        <%= f.text_area :content, :placeholder => "Content" %>
+      </p>
+     
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+    
+  </div>
  
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+</center>
 
-  <p>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>

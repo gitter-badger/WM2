@@ -12,7 +12,7 @@
     <div class="logo">
       <a href="/">Home</a> &nbsp; &nbsp; 
       <a href="/concepts">Concepts</a> &nbsp; &nbsp; 
-      <a href="#">Reviews</a> &nbsp;
+      <a href="/concepts/new">New Concept</a> &nbsp;
     </div>
     <% if user_signed_in? %>
       <div class="username">
@@ -29,7 +29,9 @@
   
    <% if user_signed_in? %>
       <div class="side-nav">
-        <div class="option"><%= current_user.email %></div>
+        <div class="option"><a href="/">HOME</a></div>
+        <div class="option"><a href="/concepts">CONCEPTS</a></div>
+        <div class="option"><a href="/concepts/new">NEW</a></div>
         <div class="option"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></div>
         <div class="option close">Close</div>
       </div>
