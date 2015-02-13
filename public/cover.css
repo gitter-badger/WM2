@@ -6,7 +6,35 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #0056A2;
+}
+
+.about_title{
+  color: #0056A2;
+  font-size: 70px;
+  position: relative;
+  bottom: 84px;
+  font-family: "KG-Blank";
+}
+
+.about{
+  color: #0056A2;
+  text-align: left;
+  text-shadow: none;
+  font-size: 25px;
+  font-family: 'Droid Sans', sans-serif;
+  position: relative;
+  bottom: 40px;
+}
+
+.copyright{
+  color: #0056A2 ;
+  font-size: 15px;
+}
+
+/*Ziras title*/ 
+.logotitle{
+  font-size: 80px;
 }
 
 /* Custom default button */
@@ -15,7 +43,7 @@ a:hover {
 .btn-default:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: ##3498db;
+  background-color: #0056A2;
   border: 1px solid #fff;
 }
 
@@ -27,12 +55,12 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #fff;
 }
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -41,8 +69,8 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  -webkit-box-shadow: inset 0 0 50px #bbb;
+          box-shadow: inset 0 0 50px #bbb;
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -56,6 +84,7 @@ body {
 /* Padding for spacing */
 .inner {
   padding: 30px;
+  border-bottom: 1px solid rga(0,0,0, .5);
 }
 
 
@@ -67,8 +96,14 @@ body {
   margin-bottom: 10px;
 }
 
+.loginbutton{
+  background-color: #0056A2;
+  color: white;
+}
+
 .masthead-nav > li {
   display: inline-block;
+
 }
 .masthead-nav > li + li {
   margin-left: 20px;
@@ -76,10 +111,11 @@ body {
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
+  padding-bottom: 2px;
   font-size: 16px;
   font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
+  color: #0056A2; /* IE8 proofing */
+  color: #0056A2;
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
@@ -87,13 +123,15 @@ body {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
+
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: #0056A2;
+  border-bottom-color: #0056A2;
 }
+
 
 @media (min-width: 768px) {
   .masthead-brand {
@@ -124,14 +162,38 @@ body {
 
 .mastfoot {
   color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.5); 
 }
 
 
 /*
  * Affix and center
  */
+.cover-heading{
+  position: relative;
+  text-align: center;
+  font-family: 'KG-Blank';
+  font-size: 300px;
+  color: #0056A2;
+  bottom: 10px;
+  /*text-decoration: underline;*/
 
+}
+
+.cover-heading2{
+  position: relative;
+  bottom: 20px;
+  font-family: 'KG-Blank';
+  font-size: 80px;
+  color: #0056A2;
+
+}
+
+
+@font-face {
+  font-family: 'KG-Blank';
+  src: url('bootstrap/fonts/SlabThing.ttf');
+}
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
