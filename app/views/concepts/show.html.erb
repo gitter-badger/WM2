@@ -1,7 +1,7 @@
 <center>
     <div class="show-concept">
         <% if user_signed_in? %>
-            <% if @concept.id == current_user.id %>
+            <% if @concept.user_id == current_user.id %>
                 <div class="owner-controls">
                     <a href="#" class="edit">Edit</a>
                     <a href="#" class="delete">Delete</a>
@@ -18,13 +18,26 @@
         <div class="concept-content">
             <%= simple_format @concept.content %>
         </div>
-        <br><br>
+        <br>
+        <hr>
+        <br>
+        <%= link_to '<button class="reply-to-concept">Write a Review</button>'.html_safe, new_concept_review_path(@concept) %>
+        <br>
+        <br><br><br><br>
         <% @concept.reviews.each do |review| %>
-            <hr>
-            <%= review.content %>
-            <br>
+            <% if review.user_id != nil %>
+                    <div class="review-pane">
+                        <div class="review-user">
+                            <%= User.find(review.user_id).email %>
+                        </div><br>
+                        <div class="review-content">
+                            <%= review.content %>
+                            <div class="triangle"></div>
+                        </div>
+                    </div>
+                <br><br>
+            <% end %>
         <% end %>
         <br><br>
-        <%= link_to '<button class="reply-to-concept">Write a Review</button>'.html_safe, new_concept_review_path(@concept) %>
     </div>
 </center>
