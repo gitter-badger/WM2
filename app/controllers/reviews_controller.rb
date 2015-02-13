@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :show
-  before_action :set_concept
+  before_action :get_concept_index
 
   # GET /reviews/1
   # GET /reviews/1.json
@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @concept, notice: 'Review was successfully created.' }
+        format.html { redirect_to @review, notice: 'Review was successfully created.' }
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new }
@@ -61,7 +61,7 @@ class ReviewsController < ApplicationController
 
   private
 
-    def set_concept
+    def get_concept_index
       @concept = Concept.find params[:concept_id]
     end
 
