@@ -68,7 +68,7 @@ a:hover {
     }
     
         .this-is-actually-the-logo {
-            background-image: image-url('zlogo.png');
+            background-image: url('zlogo.png');
             display: inline-block;
             position: absolute;
             left: -80px;
