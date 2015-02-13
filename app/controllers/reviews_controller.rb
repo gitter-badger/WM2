@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :show
-  before_action :get_concept_index
+  before_action :set_concept
 
   # GET /reviews/1
   # GET /reviews/1.json
@@ -60,7 +60,7 @@ class ReviewsController < ApplicationController
 
   private
 
-    def get_concept_index
+    def set_concept
       @concept = Concept.find params[:concept_id]
     end
 
