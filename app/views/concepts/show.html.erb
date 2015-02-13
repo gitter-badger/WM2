@@ -21,7 +21,7 @@
         <br><br>
         <% @concept.reviews.each do |review| %>
             <hr>
-            <%= review.content %>
+            <%= simple_format review.content %>
             <br>
         <% end %>
         <br><br>
