@@ -19,6 +19,12 @@
             <%= @concept.content %>
         </div>
         <br><br>
+        <% @concept.reviews.each do |review| %>
+            <hr>
+            <%= review.content %>
+            <br>
+        <% end %>
+        <br><br>
         <%= link_to '<button class="reply-to-concept">Write a Review</button>'.html_safe, new_concept_review_path(@concept) %>
     </div>
 </center>
