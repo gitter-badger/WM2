@@ -21,7 +21,7 @@
         <td><%= review.concept %></td>
         <td><%= review.rating %></td>
         <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
+        <td><%= link_to 'Edit', edit_concept_review_path(review) %></td>
         <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Review', new_review_path %>
+<%= link_to 'New Review', new_concept_review_path %>

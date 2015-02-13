@@ -1,4 +1,4 @@
 class Review < ActiveRecord::Base
-  has_many :reviews
+  belongs_to :concept
   belongs_to :user
 end
