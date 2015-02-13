@@ -14,7 +14,7 @@ a:hover {
   color: #0056A2;
   font-size: 70px;
   position: relative;
-  bottom: 84px;
+  bottom: 30px;
   font-family: "KG-Blank";
 }
 
@@ -22,10 +22,10 @@ a:hover {
   color: #0056A2;
   text-align: left;
   text-shadow: none;
-  font-size: 25px;
+  font-size: 23px;
   font-family: 'Droid Sans', sans-serif;
   position: relative;
-  bottom: 40px;
+  bottom: 20px;
 }
 
 .copyright{
