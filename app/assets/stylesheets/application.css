@@ -15,6 +15,8 @@
  */
  
  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
+ @import url(https://fonts.googleapis.com/css?family=Rokkitt);
  
 .notice, .alert {
     padding: 0px;
@@ -24,6 +26,8 @@
 html, body {
     margin: 0px;
     padding: 0px;
+    background: #efefef;
+    font-family: 'Raleway', sans-serif;
 }
 
 a {
@@ -31,22 +35,33 @@ a {
     text-decoration: inherit !important;
 }
 
+a:hover {
+    background: inherit !important;
+}
+
 .header-nav {
     position: relative;
     top: 0px;
-    left: 0px;
-    width: 100%;
+    left: 5%;
+    width: 90%;
     height: 50px;
-    background: #2980b9;
-    color: white;
+    color: rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    padding-bottom: 26px;
 }
 
     .header-nav > .username {
         float: right;
-        font-size: 1.2em;
         position: relative;
-        right: 20px;
+        right: 0%;
         top: 13px;
+    }
+    
+    .header-nav > .logo {
+        position: relative;
+        left: 0%;
+        top: 30px;
     }
     
     
@@ -91,6 +106,11 @@ a {
         text-transform: uppercase;
         font-weight: 300;
         padding-right: 50px;
+    }
+    
+    .side-nav > .option:hover, .header-burger:hover {
+        cursor: pointer;
+        background: #3498db;
     }
     
     

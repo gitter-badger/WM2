@@ -9,11 +9,13 @@
 </head>
 <body>
   <div class="header-nav">
-    <div class="logo"></div>
+    <div class="logo">
+      Lorem | Ipsum | Dolor
+    </div>
     <% if user_signed_in? %>
       <div class="username">
         <%= current_user.email %>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
+        ( <text style="color: #2980b9;"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></text> )
       </div>
     <% else %>
       <div class="username"><%= link_to('Login', new_user_session_path)  %></div>
@@ -32,6 +34,7 @@
     <% else %>
       <div class="side-nav">
         <div class="option username"><%= link_to('Login', new_user_session_path)  %></div>
+        <div class="option close">Close</div>
       </div>
     <% end %>
   

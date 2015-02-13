@@ -4,11 +4,10 @@
 
 .concepts-list-header {
     font-size: 2em;
-    font-weight: 300;
+    font-weight: bold;
     display: block;
     position: relative;
-    left: 10px;
-    padding: 10px;
+    float: left;
 }
 
 
@@ -24,6 +23,7 @@
         padding: 20px;
         text-align: left;
         border-bottom: 1px solid rgba(0, 0, 0, .2);
+        background: white;
     }
     
         .concept > .title {
@@ -35,15 +35,23 @@
         .concept > .description {
             color: rgba(0, 0, 0, .7);
             display: block;
+            font-family: 'Rokkitt', serif;
         }
         
         .concept:hover {
-            background: rgba(0, 0, 0, .06);
-            border-left: 3px solid black;
+            background: rgba(50, 50, 50, .01);
+            border-left: 3px solid #2ecc71;
             cursor: pointer;
             padding-left: 17px;
         }
         
+.concepts-header {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    height: 40px;
+    background: #2980b9;
+}
 
 
 .show-concept {
@@ -63,6 +71,7 @@
     .show-concept > .concept-description {
         padding: 10px;
         padding-top: 20px;
+        
     }
     
     .show-concept > .concept-content {
