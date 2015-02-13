@@ -67,7 +67,7 @@ a:hover {
         top: 30px;
     }
     
-        .logo > .this-is-actually-the-logo {
+        .this-is-actually-the-logo {
             background-image: url('zlogo.png');
             display: inline-block;
             position: absolute;
@@ -78,10 +78,9 @@ a:hover {
             background-size: cover;
             background-repeat: no-repeat;
         }
-    
+        
         .logo > a {
             color: #2980b9 !important;
-            
         }
     
     

@@ -181,9 +181,11 @@
     .review-content {
         display: inline-block;
         padding: 14px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         background: #3498db;
         position: relative;
-        margin-left: 20px;
+        margin-left: 10px;
         top: 6px;
         color: white;
         font-family: 'Rokkitt', serif;
