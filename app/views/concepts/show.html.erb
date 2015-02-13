@@ -31,7 +31,7 @@
                             <%= User.find(review.user_id).email %>
                         </div><br>
                         <div class="review-content">
-                            <%= review.content %>
+                            <%= simple_format review.content %>
                             <div class="triangle"></div>
                         </div>
                     </div>

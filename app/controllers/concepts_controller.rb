@@ -15,8 +15,14 @@ class ConceptsController < ApplicationController
 
   def create
     @concept = current_user.concepts.new scrub_parameters
-    @concept.save
-    redirect_to @concept
+
+    if @concept.save
+      format.html { redirect_to @concept, notice: 'Concept was successfully created.' }
+      format.json { render :show, status: :created, location: @concept }
+    else
+      format.html { render :new }
+      format.json { render json: @concept.errors, status: :unprocessable_entity }
+    end
   end
 
   def destroy
