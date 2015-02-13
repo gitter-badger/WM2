@@ -1,7 +1,10 @@
 class ReviewsController < ApplicationController
+  @@review_reward = 1
+  @@approval_bonus = 2
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :show
   before_action :set_concept
+  before_action :earn_credit!, only: :create
 
   def show
   end
@@ -48,6 +51,10 @@ class ReviewsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_review
       @review = Review.find(params[:id])
+    end
+
+    def earn_credit!
+      current_user.credit += @@review_reward
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
