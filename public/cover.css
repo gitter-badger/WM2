@@ -7,6 +7,7 @@ a,
 a:focus,
 a:hover {
   color: #0056A2;
+
 }
 
 .about_title{
@@ -41,10 +42,11 @@ a:hover {
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #333;
+  color: #fff;
   text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #0056A2;
-  border: 1px solid #fff;
+  background-color: #37b;
+  border: 1.5px solid #fff;
+
 }
 
 
