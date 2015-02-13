@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :show
+  before_action :get_concept_index
 
   # GET /reviews/1
   # GET /reviews/1.json
@@ -9,18 +10,11 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    if user_signed_in?
-      @review = Review.new user: current_user
-    else
-      redirect_to new_user_session_path
-    end
+    @review = Review.new(user: current_user)
   end
 
   # GET /reviews/1/edit
   def edit
-    unless user_signed_in? and current_user == @review.user
-      # TODO: redirect to a 404 page
-    end
   end
 
   # POST /reviews
@@ -64,6 +58,11 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+    def get_concept_index
+      @concept = Concept.find params[:concept_id]
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_review
       @review = Review.find(params[:id])
