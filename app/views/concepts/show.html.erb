@@ -26,9 +26,17 @@
         <br><br><br><br>
         <% @concept.reviews.each do |review| %>
             <% if review.user_id != nil %>
+                <% reviewer = User.find(review.user_id) %>
+                <% is_yours = (reviewer == current_user) %>
                     <div class="review-pane">
+                        <% if is_yours %>
+                            <div class="owner-controls">
+                                <a href="#" class="edit">Edit</a>
+                                <a href="#" class="delete">Delete</a>
+                            </div>
+                        <% end %>
                         <div class="review-user">
-                            <%= User.find(review.user_id).email %>
+                            <%= is_yours ? 'you' : reviewer.email %>
                         </div><br>
                         <div class="review-content">
                             <%= simple_format review.content %>
