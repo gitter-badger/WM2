@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: :show
 
   # GET /reviews/1
   # GET /reviews/1.json
@@ -9,9 +10,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     if user_signed_in?
-      @review = Review.new
-      @review.concept = params.require(:concept)
-      @review.user = current_user
+      @review = Review.new user: current_user
     else
       redirect_to new_user_session_path
     end
@@ -72,6 +71,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:content, :concept)
+      params.require(:review).permit(:content)
     end
 end

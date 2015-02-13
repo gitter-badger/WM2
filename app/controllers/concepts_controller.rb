@@ -1,4 +1,5 @@
 class ConceptsController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
 
   def index
     @concepts = Concept.all
