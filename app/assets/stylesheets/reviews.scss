@@ -11,6 +11,29 @@
 }
 
 
+.zen-header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    height: 30px;
+    background: white;
+}
+
+    .zen-header a {
+        position: relative;
+        padding: 10px;
+        padding-top: 5px;
+    }
+    
+    .zen-text {
+         position: fixed;
+        top: 30px;
+        left: 0px;
+        width: 100% !important;
+        height: calc(100% - 30px) !important;
+    }
+
 .concepts {
     position: relative;
     width: 90%;

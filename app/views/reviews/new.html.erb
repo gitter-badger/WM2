@@ -37,8 +37,14 @@
         </div>
       <% end %>
     
+      <a href="#" class="enter-zen">Zen Mode</a>
+      <br><br>
+      <div class="zen-header" style="display: none;">
+        <a href="#" class="exit-zen" style="float: right;">Return</a>
+        <a href="#" style="float: left;"><%= @concept.title %></a>
+      </div>
       <div class="field">
-        <%= f.text_area :content, placeholder: "Write A Review"%>
+        <%= f.text_area :content, placeholder: "Write A Review", class: "write-review"%>
       </div>
       <div class="actions">
         <%= f.submit %>

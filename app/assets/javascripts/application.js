@@ -28,6 +28,17 @@ $(document).on("click", ".close", function(e) {
     $(".side-nav").hide();
 });
 
+$(document).on("click", ".enter-zen", function(e) {
+    $(".write-review").addClass("zen-text");
+    $(".zen-header").show();
+    $(".write-review").focus();
+});
+
+$(document).on("click", ".exit-zen", function(e) {
+    $(".write-review").removeClass('zen-text');
+    $(".zen-header").hide();
+});
+
 $(document).on("keyup", ".search-bar", function(e) {
    var needle = $(this).val().toLowerCase();
    
