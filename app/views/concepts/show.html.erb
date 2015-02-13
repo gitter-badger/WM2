@@ -31,8 +31,8 @@
                     <div class="review-pane">
                         <% if is_yours %>
                             <div class="owner-controls">
-                                <a href="#" class="edit">Edit</a>
-                                <a href="#" class="delete">Delete</a>
+                                <%= link_to "Edit", edit_concept_review_path(concept_id: @concept.id, id: review.id), class: "edit" %>
+                                <%= link_to "Delete", concept_review_path(concept_id: @concept.id, id: review.id), class: "delete", method: :delete %>
                             </div>
                         <% end %>
                         <div class="review-user">

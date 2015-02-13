@@ -1,3 +1,49 @@
-<h1>Editing Review</h1>
-<%= render 'form' %>
-<%= link_to 'Show', @review %> |
+
+<center>
+
+  <div class="concepts">
+    <text style="float: left; background: #2980b9; padding: 6px; color: white; border-radius: 2px;">
+      <%= link_to 'Back to Concept', @concept %>
+    </text>
+    <br><br><br>
+      <div class="concept-title">
+          <%= @concept.title %>
+      </div>
+      <div class="concept-description">
+          <%= @concept.description %>
+      </div>
+      <br>
+      <div class="concept-content">
+          <%= @concept.content %>
+      </div>
+    <br><br>
+    <hr>
+
+  </div>
+
+  <div class="show-concept new-form">
+
+    <%= form_for(@review, url: concept_review_path(concept_id: @concept.id, id: @review.id), method: :put) do |f| %>
+      <% if @review.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+          <ul>
+          <% @review.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.text_area :content, placeholder: "Update Review"%>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+  </div>
+
+
+</center>
