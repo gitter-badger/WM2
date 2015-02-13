@@ -11,8 +11,6 @@
             <%= @concept.content %>
         </div>
         <br><br>
-        <button class="reply-to-concept">Write a Review</button>
+        <%= link_to '<button class="reply-to-concept">Write a Review</button>'.html_safe, "/reviews/new?concept=#{@concept.id}" %>
     </div>
-
-
 </center>
