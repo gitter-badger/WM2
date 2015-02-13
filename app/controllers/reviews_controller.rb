@@ -8,15 +8,19 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = Review.new
-    @review.concept = params.require(:concept)
-    @review.user = current_user.id
+    if user_signed_in?
+      @review = Review.new
+      @review.concept = params.require(:concept)
+      @review.user = current_user
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /reviews/1/edit
   def edit
-    unless user_signed_in? and current_user.id == @review.user
-      render
+    unless user_signed_in? and current_user == @review.user
+      # TODO: redirect to a 404 page
     end
   end
 
@@ -68,6 +72,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:content)
+      params.require(:review).permit(:content, :concept)
     end
 end
