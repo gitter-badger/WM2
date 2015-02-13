@@ -1,10 +1,12 @@
 <center>
     <div class="show-concept">
-        <% if @concept.id == current_user.id %>
-            <div class="owner-controls">
-                <a href="#" class="edit">Edit</a>
-                <a href="#" class="delete">Delete</a>
-            </div>
+        <% if user_signed_in? %>
+            <% if @concept.id == current_user.id %>
+                <div class="owner-controls">
+                    <a href="#" class="edit">Edit</a>
+                    <a href="#" class="delete">Delete</a>
+                </div>
+            <% end %>
         <% end %>
         <div class="concept-title">
             <%= @concept.title %>
