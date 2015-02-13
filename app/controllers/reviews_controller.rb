@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = @concept.reviews.new()
+    @review = @concept.reviews.new
     @review.user = current_user
   end
 

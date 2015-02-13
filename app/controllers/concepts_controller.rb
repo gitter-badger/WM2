@@ -10,10 +10,11 @@ class ConceptsController < ApplicationController
   end
 
   def new
+    @concept = current_user.concepts.new
   end
 
   def create
-    @concept = Concept.new scrub_parameters
+    @concept = current_user.concepts.new scrub_parameters
     @concept.save
     redirect_to @concept
   end
