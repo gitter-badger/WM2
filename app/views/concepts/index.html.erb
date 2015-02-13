@@ -21,9 +21,6 @@
       <div class="description">
         <%= concept.description.length > 160 ? concept.description[0...160] + "..." : concept.description %>
       </div>
-      <%= link_to 'delete', concept,
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
    </div>
   <% end %>
   </div>
