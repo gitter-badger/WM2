@@ -55,6 +55,7 @@ class ReviewsController < ApplicationController
 
     def earn_credit!
       current_user.credit += @@review_reward
+      current_user.save
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
