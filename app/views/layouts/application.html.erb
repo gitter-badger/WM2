@@ -20,10 +20,11 @@
     <% if user_signed_in? %>
       <div class="username">
         <%= current_user.email %>
-        ( <text style="color: #2980b9;"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></text> )
+        <text style="color: #27ae60;">[<%= current_user.credit %> credit]</text>
+        ( <text style="color: #2980b9;"><%= link_to('Log out', destroy_user_session_path, :method => :delete) %></text> )
       </div>
     <% else %>
-      <div class="username"><%= link_to('Login', new_user_session_path)  %></div>
+      <div class="username"><%= link_to('Log in', new_user_session_path)  %></div>
     <% end %>
   </div>
   <div class="header-burger">
