@@ -27,3 +27,16 @@ $(document).on("click",".header-burger", function(e) {
 $(document).on("click", ".close", function(e) {
     $(".side-nav").hide();
 });
+
+$(document).on("keyup", ".search-bar", function(e) {
+   var needle = $(this).val().toLowerCase();
+   
+    $(".concept").each(function() {
+       var haystack = $(this).text().toLowerCase();
+       if (haystack.indexOf(needle) >= 0)
+         $(this).show();
+      else
+         $(this).hide();
+    });
+    
+});

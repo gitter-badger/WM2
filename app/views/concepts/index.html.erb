@@ -3,7 +3,15 @@
  <div class="concepts">
    
   <div class="concepts-list-header">CONCEPTS</div>
-  <br><br><br><br>
+  <br><br>
+  <div class="header-toolbelt">
+    <div class="results-found">
+      <%= @concepts.length %> result(s) found.
+    </div>
+    <input type="text" class="search-bar" placeholder="Search Concepts...">
+  </div>
+  
+  <br><br>
   <div class="concepts-header"></div>
   <% @concepts.each do |concept| %>
     <div class="concept" id="<%= concept.id %>">

@@ -53,6 +53,19 @@
     background: #2980b9;
 }
 
+.results-found {
+    float: left;
+}
+
+.search-bar {
+    float: right;
+    border: 1px solid rgba(0, 0, 0, .2);
+    padding: 5px;
+    position: relative;
+    border-radius: 2px;
+    top: -3px;
+}
+
 
 .show-concept {
     position: relative;
@@ -77,6 +90,8 @@
     .show-concept > .concept-content {
         padding: 10px;
         background: rgba(0,0, 0, .06);
+        font-family: 'Rokkitt', serif;
+        font-size: 16px;
     }
     
 .reply-to-concept {
