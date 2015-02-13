@@ -4,7 +4,7 @@
             <% if @concept.user_id == current_user.id %>
                 <div class="owner-controls">
                     <%= link_to "Edit", edit_concept_path(@concept), class: "edit" %>
-                    <%= link_to "Delete", concept_path(@concept), class: "delete", method: :delete %>
+                    <%= link_to "Delete", concept_path(@concept), class: "delete", method: :delete, data: { confirm: "Are you sure?" } %>
                 </div>
             <% end %>
         <% end %>
@@ -32,7 +32,7 @@
                         <% if is_yours %>
                             <div class="owner-controls">
                                 <%= link_to "Edit", edit_concept_review_path(concept_id: @concept.id, id: review.id), class: "edit" %>
-                                <%= link_to "Delete", concept_review_path(concept_id: @concept.id, id: review.id), class: "delete", method: :delete %>
+                                <%= link_to "Delete", concept_review_path(concept_id: @concept.id, id: review.id), class: "delete", method: :delete, data: { confirm: "Are you sure?" } %>
                             </div>
                         <% end %>
                         <div class="review-user">
