@@ -21,6 +21,9 @@
 .notice, .alert {
     padding: 0px;
     margin: 0px;
+    position: relative;
+    left: 5%;
+    top: 10px;
 }
 
 html, body {
@@ -117,6 +120,17 @@ a:hover {
         cursor: pointer;
         background: #3498db;
     }
+    
+    
+    
+    
+.log-in {
+    position: relative;
+    width: 400px;
+}
+    
+    
+    
     
     
     
