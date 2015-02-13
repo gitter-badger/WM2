@@ -1,5 +1,9 @@
 class ConceptsController < ApplicationController
+  @@concept_cost = 3
+
   before_action :authenticate_user!, except: [:show, :index]
+  before_action :validate_credit, only: :new
+  before_action :spend_credit!, only: :create
 
   def index
     @concepts = Concept.all
@@ -44,6 +48,17 @@ class ConceptsController < ApplicationController
   end
 
 private
+  def validate_credit
+    credit = current_user.credit
+    if credit < @@concept_cost
+      redirect_to concepts_path, notice: "Not enough credit! You have #{credit} and need #{@@concept_cost}."
+    end
+  end
+
+  def spend_credit!
+    current_user.credit -= @@concept_cost
+  end
+
   def scrub_parameters
     params.require(:concept).permit(:title, :description, :content)
   end
