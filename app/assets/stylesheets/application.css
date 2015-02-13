@@ -24,7 +24,24 @@
     position: relative;
     left: 5%;
     top: 10px;
+    color: white;
 }
+
+    .notice > text, .alert > text {
+        position: absolute;
+        width: calc(90%);
+        display: inline;
+        margin: 0px;
+        z-index: 99999;
+    }
+    
+    .notice > text {
+        background: #F39C12;
+    }
+    
+    .alert > text {
+        background: #F22613;
+    }
 
 html, body {
     margin: 0px;
