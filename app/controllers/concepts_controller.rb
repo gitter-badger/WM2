@@ -57,6 +57,7 @@ private
 
   def spend_credit!
     current_user.credit -= @@concept_cost
+    current_user.save
   end
 
   def scrub_parameters
