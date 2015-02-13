@@ -3,23 +3,17 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!, except: :show
   before_action :get_concept_index
 
-  # GET /reviews/1
-  # GET /reviews/1.json
   def show
   end
 
-  # GET /reviews/new
   def new
     @review = @concept.reviews.new
     @review.user = current_user
   end
 
-  # GET /reviews/1/edit
   def edit
   end
 
-  # POST /reviews
-  # POST /reviews.json
   def create
     @review = @concept.reviews.new review_params
     @review.user = current_user
@@ -35,8 +29,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /reviews/1
-  # PATCH/PUT /reviews/1.json
   def update
     respond_to do |format|
       if @review.update(review_params)
@@ -49,8 +41,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # DELETE /reviews/1
-  # DELETE /reviews/1.json
   def destroy
     @review.destroy
     respond_to do |format|
