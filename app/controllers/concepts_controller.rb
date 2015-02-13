@@ -13,15 +13,27 @@ class ConceptsController < ApplicationController
     @concept = current_user.concepts.new
   end
 
+  def edit
+    @concept = Concept.find params[:id]
+  end
+
   def create
     @concept = current_user.concepts.new scrub_parameters
 
     if @concept.save
-      format.html { redirect_to @concept, notice: 'Concept was successfully created.' }
-      format.json { render :show, status: :created, location: @concept }
+      redirect_to concept_path(@concept), notice: 'Concept was successfully created.'
     else
-      format.html { render :new }
-      format.json { render json: @concept.errors, status: :unprocessable_entity }
+      render :new
+    end
+  end
+
+  def update
+    @concept = Concept.find params[:id]
+
+    if @concept.update(scrub_parameters)
+      redirect_to concept_path(@concept), notice: 'Concept was successfully updated.'
+    else
+      render :edit
     end
   end
 

@@ -1,0 +1,30 @@
+<center>
+  
+  <div class="concepts"><br>
+    <div class="concepts-list-header">EDIT CONCEPT</div>
+  </div>
+  
+  <div class="show-concept new-form">
+     
+    <%= form_for :concept, url: concept_path, method: :put do |f| %>
+      <p>
+        <%= f.text_field :title, :placeholder => "Title", :class => "new-title" %>
+      </p>
+     
+      <p>
+        <%= f.text_area :description, :placeholder => "Description" %>
+      </p>
+    
+      <p>
+        <%= f.text_area :content, :placeholder => "Content" %>
+      </p>
+     
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+    
+  </div>
+ 
+</center>
+

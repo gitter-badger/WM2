@@ -3,8 +3,8 @@
         <% if user_signed_in? %>
             <% if @concept.user_id == current_user.id %>
                 <div class="owner-controls">
-                    <a href="#" class="edit">Edit</a>
-                    <a href="#" class="delete">Delete</a>
+                    <%= link_to "Edit", edit_concept_path(@concept), class: "edit" %>
+                    <%= link_to "Delete", concept_path(@concept), class: "delete", method: :delete %>
                 </div>
             <% end %>
         <% end %>
