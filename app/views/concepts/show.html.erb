@@ -16,7 +16,7 @@
         </div>
         <br>
         <div class="concept-content">
-            <%= @concept.content %>
+            <%= simple_format @concept.content %>
         </div>
         <br><br>
         <% @concept.reviews.each do |review| %>
