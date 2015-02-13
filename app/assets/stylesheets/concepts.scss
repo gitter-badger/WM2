@@ -199,3 +199,11 @@
         font-family: 'Rokkitt', serif;
         line-height: 1.2em;
     }
+    
+        .review-content p {
+            
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        }
